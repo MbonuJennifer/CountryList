@@ -1,6 +1,72 @@
-<div class="container">
-    <h3 class="heading">Find Any Country Here</h3>
-    <p>table works!</p>
+<div class="container my-3">
+  <h3 class="heading">Find Any Country Here</h3>
+  <div class="dataarea bg-light p-3">
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            style="width: 400px"
+          />
+          <button class="btn btn-outline" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="d-flex">
+        <div class="d-flex align-items-center mt-3 me-3">
+            <span class="ms-3 me-2">Show</span>
+            <select class="form-select rowSelect" style="width: 70px" aria-label="Default select example">
+            <option selected>10</option>
+            <option value="1">5</option>
+            <option value="2">10</option>
+            <option value="3">35</option>
+            </select>
+            <span class="ms-2">rows</span>
+        </div>
+        <div class="filterSelect mt-3">
+            <select class="form-select rowSelect" style="width: 150px" aria-label="Default select example">
+            <option selected>Select Filter</option>
+            <option value="1">Smaller than Lithuania</option>
+            <option value="2">In Oceania Region</option>
+            </select>
+        </div>
+    </div>
 
+    </nav>
+    <table class="table table-responsive-md table-hover">
+      <thead class="table-light sticky-top top-0">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Country Name</th>
+          <th scope="col">Region</th>
+          <th scope="col">Area Size</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>View</td>
+        </tr>
+      </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-end">
+        <li class="page-item disabled">
+          <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </div>
-

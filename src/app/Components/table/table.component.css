@@ -1,3 +1,14 @@
-.heading{
-    color: var(--clr-purple-light);
+.heading {
+  color: var(--clr-purple-light);
+}
+.btn-outline{
+    border: 1px solid var(--clr-orange);
+    transition: all 100ms ease-in-out;
+}
+.btn-outline:hover{
+    color: var(--clr-white);
+    background-color: var(--clr-orange);
+}
+.dataarea{
+    border-radius: 15px;
 }
