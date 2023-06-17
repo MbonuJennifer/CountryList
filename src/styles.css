@@ -1,5 +1,6 @@
 :root {
-  --clr-primary: #fff;
+  --clr-primary: #f2f2f2;
+  --clr-white: #fff;
   --clr-purple-light: #a01775;
   --clr-purple-dark: #881e66;
   --clr-orage: #ed7d31;
@@ -37,8 +38,8 @@ body {
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: var(--clr-black);
-  color: var(--clr-primary);
+  background-color: var(--clr-primary);
+  color: var(--clr-black);
   overflow-x: hidden;
 }
 
