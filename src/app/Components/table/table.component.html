@@ -17,11 +17,9 @@
       <div class="d-flex">
         <div class="d-flex align-items-center mt-3 me-3">
             <span class="ms-3 me-2">Show</span>
-            <select class="form-select rowSelect" style="width: 70px" aria-label="Default select example">
+            <select class="form-select rowSelect" style="width: 70px" aria-label="Default select example" [(ngModel)]="pageSize" (ngModelChange)="refreshCountries()">
             <option selected>10</option>
-            <option value="1">5</option>
-            <option value="2">10</option>
-            <option value="3">35</option>
+            <option [ngValue]="5">5</option>
             </select>
             <span class="ms-2">rows</span>
         </div>
@@ -35,28 +33,32 @@
     </div>
 
     </nav>
-    <table class="table table-responsive-md table-hover">
+    <table class="table table-responsive-md table-sm table-hover">
       <thead class="table-light sticky-top top-0">
         <tr>
-          <th scope="col">#</th>
+          <th scope="col">S/N</th>
+          <th scope="col">Flag</th>
           <th scope="col">Country Name</th>
+          <th scope="col">Capital</th>
           <th scope="col">Region</th>
           <th scope="col">Area Size</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+        <tr *ngFor="let country of countries; let i=index;">
+          <td>{{(i + 1) + (page - 1) * pageSize}}</td>
+          <td><img width="30px" height="15px" src={{country.flag}}></td>
+          <td>{{country.name}}</td>
+          <td>{{country.capital}}</td>
+          <td>{{country.continent}}</td>
+          <td>{{country.area | number}}</td>
           <td>View</td>
         </tr>
       </tbody>
     </table>
     <nav aria-label="Page navigation example">
-      <ul class="pagination justify-content-end">
+      <ul class="pagination justify-content-end" >
         <li class="page-item disabled">
           <a class="page-link">Previous</a>
         </li>
